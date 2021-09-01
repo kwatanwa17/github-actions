@@ -3,7 +3,7 @@ name: Using artifacts
 on: [push]
 
 env:
-  ARTIFACT_NAME: ${{ secrets.ARTIFACT_NAME }}
+  ARTIFACT_NAME: artifact_name
 
 jobs:
   build:
