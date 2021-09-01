@@ -9,5 +9,7 @@ jobs:
     steps:
       - name: Check out the code
         uses: actions/checkout@v2
-      - name: Upload artifacts ${{ secrets.ARTIFACT_NAME }}
+      - name: Upload artifacts ${{ env.ARTIFACT_NAME }}
+        env:
+          ARTIFACT_NAME: ${{ secrets.ARTIFACT_NAME }}
         uses: actions/upload-artifact@v1.0.0
